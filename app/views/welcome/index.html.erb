@@ -1,3 +1,6 @@
 <h1>Coding my life</h1>
 <%= link_to 'My Blog', controller: 'articles' %>
-
+<% @articles.each do |article| %>
+  <h3 class='article-title'><%= link_to article.title, article_path(article) %> <small class='article-created-at'><%= friendly_date(article.created_at) %></small></h3>
+  <p class='article-body'><%= article.text %></p>
+<% end %>
