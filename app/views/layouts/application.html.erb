@@ -22,7 +22,15 @@
   </header>
 
   <div id="main">
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div class="sidebar">
+      <h3>Welcome to my blog <span class="heart">&#9829;</span></h3>
+      <%= image_tag "aboutphoto.jpg", alt: "katherine", class: "about-photo" %>
+      <br/>
+      <p>about</p>
+    </div>
   </div>
 
 </body>

@@ -1,3 +1,25 @@
+.container{
+  width: 80%;
+  float: left;
+}
+
+.sidebar{
+ text-align: center;
+ width: 19%;
+ float: right;
+ // border-left: 1px solid black;
+ // border-bottom: 1px solid black;
+ .about-photo{
+  width: 50%;
+  border: 3px $blogpink solid;
+  border-radius: 70px;
+ }
+}
+.heart{
+  color: $blogpink ;
+
+}
+
 body{
   margin: 0px; 
 }
@@ -5,6 +27,7 @@ body{
 #main{
   background-color: white ;
   padding: 0 40px;
+  margin-top: 40px;
   // margin: 0px; 
 }
 
@@ -30,7 +53,7 @@ nav{
       padding: 10px 0;
       background-color: black;
       &:hover{
-        background-color: #fa5ca9;
+        background-color: $blogpink;
         color: white;
       }
 
