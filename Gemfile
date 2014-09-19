@@ -14,12 +14,20 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'spring',        group: :development
+gem "paperclip", "~> 4.2"
+gem 'simple_form'
 
 group :production do
   gem 'rails_12factor'
 end
 
+group :development do
+  gem 'spring'
+  gem "better_errors"
+  gem "binding_of_caller" 
+  gem 'meta_request'
+  gem 'xray-rails'
+end
 
 
 

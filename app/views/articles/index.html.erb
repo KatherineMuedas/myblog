@@ -9,8 +9,11 @@
     <h2 class='article-title'><%= link_to article.title, article_path(article) %> </h2>
     
    <h3 class='article-created-at'> <small ><%= friendly_date(article.created_at) %></small></h3>
-
-    <p class='article-body'><%= article.text %></p>
+   <p class='img-center'>
+  <% unless article.pictures.empty? %>
+    <%= image_tag article.pictures.first.photo.url(:large), class:"show-img" %><br/>           
+  <% end %> 
+  </p>
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article_path(article),
                     method: :delete, data: { confirm: 'Are you sure?' } %>

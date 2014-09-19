@@ -1,6 +1,6 @@
 .article-title  {
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ededed; 
   width: 60%;
   margin: auto;
   padding-bottom: 10px;
@@ -20,4 +20,11 @@
 .article-body {
   text-align:center;
 
+}
+
+.comment-tittle{
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 10px;
 }

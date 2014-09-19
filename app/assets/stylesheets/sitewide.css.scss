@@ -1,5 +1,14 @@
+.img-center{
+  text-align: center;
+}
+
+.leftsidebar{
+  width:19%;
+  float: left;
+}
+
 .container{
-  width: 80%;
+  width: 60%;
   float: left;
 }
 
@@ -47,8 +56,9 @@ nav{
     width: 100%;
     text-align: center;
     li{
-      display:inline-block;
-      width:24%;
+      float: left;
+      display:inline;
+      width:25%;
       margin:0;
       padding: 10px 0;
       background-color: black;

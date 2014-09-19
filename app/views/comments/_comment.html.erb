@@ -1,12 +1,9 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+
+<div class="comment-box">
+  <h3 class="comment-author"><%= comment.commenter %>:</h3>
  
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+  <h4 class="comment-body"><%= comment.body %></h4>
+</div>  
  
 <p>
   <%= link_to 'Destroy Comment', [comment.article, comment],

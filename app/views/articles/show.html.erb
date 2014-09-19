@@ -1,14 +1,17 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+
+<h2 class='article-title'><%= @article.title %></h2>
+<h3 class='article-created-at'> <small ><%= friendly_date(@article.created_at) %></small></h3>
+<p class='img-center'>
+  <% unless @article.pictures.empty? %>
+    <%= image_tag @article.pictures.first.photo.url(:large), class:"show-img" %><br/>           
+  <% end %> 
 </p>
  
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
- 
-<h2>Comments</h2>
+<p class='article-body'><%= @article.text %></p> 
+ <%= link_to 'Add photo', new_article_picture_path(@article.id), class: "btn btn-danger" %>
+
+
+<h2 class='comment-tittle'>Comments:</h2>
 <%= render @article.comments %>
  
 <h2>Add a comment:</h2>
