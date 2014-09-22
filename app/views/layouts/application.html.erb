@@ -9,13 +9,21 @@
 <body>
   <header>
     <nav>
+
+      <% if admin_signed_in? %>
+      <ul class="cf">
+        <%= render 'layouts/devise_links' %>
+      </ul>
+      <% end %>  
       <div>
-        <H2 class="brand">Coding my life</H2>
+        <H2 class="brand"><%= link_to "Coding My Life", root_path %></H2>
       </div>
       <ul class="cf">
-        <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", "#" %></li>
-        <li><%= link_to "Articles", articles_path %></li>
+        <li><%= link_to "Articles", root_path %></li>
+        <li class="portfolio-link">
+          <%= link_to "Portfolio", "#", target: "_blank"%>
+        </li>
         <li><%= link_to "Contact me", "#" %></li>
       </ul>
     </nav>
@@ -32,7 +40,7 @@
       <h3>Welcome to my blog <span class="heart">&#9829;</span></h3>
       <%= image_tag "aboutphoto.jpg", alt: "katherine", class: "about-photo" %>
       <br/>
-      <p>about</p>
+      <p></p>
     </div>
   </div>
 

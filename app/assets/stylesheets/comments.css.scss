@@ -9,14 +9,31 @@
   padding-right: 30px;
 }
 .comment-author{
-color: #404040;
+color: #c4415d;
 display: block;
 font-size: 12px;
 font-style: normal;
 line-height: 22px;
-text-transform: uppercase;
+font: bold 14px/normal helvetica, arial, sans-serif;
 }
 .comment-body{
 font-size: 14px;
-line-height: 24px;
+line-height: 10px;
+font: 400 13px/normal helvetica, arial, sans-serif;
+}
+
+.not-inline{
+  display: block;
+}
+.bigtextbox{
+  width: 80%;
+  font-size: 15px;
+}
+.namebox{
+  font-size: 15px;
+  width: 30%;
+}
+.title {
+ color: #c4415d; 
+ font: bold 14px/normal helvetica, arial, sans-serif;
 }

@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem "paperclip", "~> 4.2"
 gem 'simple_form'
+gem 'devise'
 
 group :production do
   gem 'rails_12factor'

@@ -1,12 +1,12 @@
-
 <div class="comment-box">
   <h3 class="comment-author"><%= comment.commenter %>:</h3>
  
   <h4 class="comment-body"><%= comment.body %></h4>
 </div>  
- 
+<% if admin_signed_in? %> 
 <p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
+  <%= link_to 'Delete Comment', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>
+<% end %>

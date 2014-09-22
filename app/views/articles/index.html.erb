@@ -1,7 +1,3 @@
-<h1>Listing Articles</h1>
-
-<%= link_to 'New article', new_article_path %>
-
 <div id="home">
   
   
@@ -11,12 +7,20 @@
    <h3 class='article-created-at'> <small ><%= friendly_date(article.created_at) %></small></h3>
    <p class='img-center'>
   <% unless article.pictures.empty? %>
-    <%= image_tag article.pictures.first.photo.url(:large), class:"show-img" %><br/>           
+    <%= link_to image_tag(article.pictures.first.photo.url(:large), class:"show-img"), article_path(article.id) %>
+    <br/>           
+    <div class="small-box">
+      <p>
+        <%= link_to 'See More', article_path(article), class: 'button' %>
+      </p>
+    </div>
   <% end %> 
   </p>
+  <% if admin_signed_in? %>
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article_path(article),
                     method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
   <% end %>
 </div>
 

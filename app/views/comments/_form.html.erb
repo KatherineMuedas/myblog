@@ -1,13 +1,9 @@
-<%= form_for([@article, @article.comments.build]) do |f| %>
-  <p>
-    <%= f.label 'Name' %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label 'Comment' %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+<%= simple_form_for([@article, @article.comments.build]) do |f| %>
+  <div class='comment-box'>
+    <p>
+    <%= f.input :commenter, label: 'Name', placeholder: "Enter your name here", label_html: { class: 'title not-inline'}, input_html:{class: 'namebox'} %>
+    <%= f.input :body, label: 'Comment', placeholder: "Enter your comment here", input_html: { rows: 5, class: 'bigtextbox' }, label_html: { class: 'title not-inline'} %> 
+    <%= f.submit 'Send' %> 
+    </p>
+  </div> 
 <% end %>
