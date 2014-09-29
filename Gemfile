@@ -17,6 +17,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem "paperclip", "~> 4.2"
 gem 'simple_form'
 gem 'devise'
+gem "figaro"
+gem "aws-sdk"
+gem 'asset_sync'
+
 
 group :production do
   gem 'rails_12factor'
