@@ -29,5 +29,5 @@ module MyBlog
   #     s3_protocol: 'https',
   #     path: "/assets/:attachment/:id/:style.:extension"
   #   }
-  # end
+  end
 end
