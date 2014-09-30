@@ -20,6 +20,7 @@ gem 'devise'
 gem "figaro"
 gem "aws-sdk"
 gem 'asset_sync'
+gem 'friendly_id', '~> 5.0.0'
 
 
 group :production do

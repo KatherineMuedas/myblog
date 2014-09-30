@@ -1,4 +1,9 @@
-
+<% content_for :title do %>
+  <%= @article.title %> : Coding My Life
+<% end %>
+<% content_for :description do %>
+  <%= @article.text %> 
+<% end %>
 <h2 class='article-title'><%= @article.title %></h2>
 <h3 class='article-created-at'> <small ><%= friendly_date(@article.created_at) %></small></h3>
 <p>
