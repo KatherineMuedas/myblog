@@ -5,7 +5,7 @@
   <%= @article.text %> 
 <% end %>
 <h2 class='article-title'><%= @article.title %></h2>
-<h3 class='article-created-at'> <small ><%= friendly_date(@article.created_at) %></small></h3>
+<h3 class='article-created-at'> <small ><%= friendly_date(@article.published_at) %></small></h3>
 <p>
   <% unless @article.pictures.empty? %>
     <% @article.pictures.each do |picture|%>

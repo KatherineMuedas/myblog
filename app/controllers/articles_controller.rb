@@ -3,7 +3,7 @@ before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destr
 before_action :set_article, only:[:show, :edit, :update, :destroy]  
 
 def index
-  @articles = Article.all
+  @articles = Article.where("published_at <= ?", Time.now)
 end
 
 def new
@@ -48,7 +48,7 @@ end
     @article = Article.friendly.find(params[:id])
   end
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :published_at)
   end
 
 end

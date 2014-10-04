@@ -4,7 +4,9 @@
 @import "welcome";
 @import "articles";
 @import "comments";
-
+*{
+  font-family: Verdana, sans-serif;
+}
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -14,6 +16,29 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
+ .main-box{
+  margin-bottom: 48px;
+  padding-left: 30px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #eeeeee;
+  background-color: #fdfdfd;
+  padding-right: 30px;
+}
+.photo-container{
+  text-align: center;
+}
+.main-photo{
+  width: 45%;
+  border:12px solid white;
+}
+.text-container{
+  text-align: justify;
+  width: 70%;
+  min-width: 250px;
+  margin:auto;
+}
 .cf:before,.cf:after {
   content: " "; 
   display: table; 
