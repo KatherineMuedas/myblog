@@ -1,13 +1,18 @@
 .article-title  {
+  text-transform: uppercase;
   text-align: center;
   border-bottom: 1px solid #ededed; 
   width: 60%;
   margin: auto;
   padding-bottom: 10px;
+  font-family: palatino, 'times new roman', serif;
+  
+
  
   a{
-    color: black;
+    color: rgb(51, 51, 51);
     text-decoration: none;
+    font-family: palatino, 'times new roman', serif;
   }
 }
 .article-created-at {
@@ -15,9 +20,11 @@
   
   text-align:center;
   font-weight: normal;
+  font: italic normal 12px 'Times New Roman', Times, FreeSerif, serif;
 }
 .article-body {
   text-align:center;
+
 
 }
 

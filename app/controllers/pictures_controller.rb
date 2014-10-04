@@ -23,7 +23,7 @@ class PicturesController < ApplicationController
 
   private
   def find_article
-    @article = Article.find(params[:article_id])
+    @article = Article.friendly.find(params[:article_id])
   end
 
   def pictures_params

@@ -7,8 +7,8 @@
 <h2 class='article-title'><%= @article.title %></h2>
 <h3 class='article-created-at'> <small ><%= friendly_date(@article.published_at) %></small></h3>
 <p>
-  <% unless @article.pictures.empty? %>
-    <% @article.pictures.each do |picture|%>
+  <% unless @pictures.empty? %>
+    <% @pictures.each do |picture|%>
       <p class='img-center'>
         <%= image_tag picture.photo.url(:large), class:"show-img" %>
         <br>
@@ -20,7 +20,7 @@
   <% end %> 
 </p>
  
-<p class='article-body'><%= @article.text %></p> 
+<p class='article-body'><%= simple_format(@article.text) %></p> 
  <% if admin_signed_in? %>
  <%= link_to 'Add photo', new_article_picture_path(@article.id), class: "btn btn-danger" %>
  <% end %>

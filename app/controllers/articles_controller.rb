@@ -3,7 +3,7 @@ before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destr
 before_action :set_article, only:[:show, :edit, :update, :destroy]  
 
 def index
-  @articles = Article.where("published_at <= ?", Time.now)
+  @articles = Article.where("published_at <= ?", Time.now).order(published_at: :desc)
 end
 
 def new
@@ -24,8 +24,8 @@ def edit
   
 end
 
-  def show
-  
+def show
+  @pictures = @article.pictures.order(created_at: :asc)
 end
 
 def update
