@@ -7,6 +7,14 @@
 p{
   font-family: Verdana, sans-serif;
 }
+.fancy-font{
+  font: italic normal 18px 'Times New Roman', Times, FreeSerif, serif;
+}
+
+.fancy-font-lg{
+  @extend .fancy-font;
+  font-size: 16px;
+}
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the

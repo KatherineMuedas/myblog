@@ -22,7 +22,8 @@
       </div>
       <ul class="cf">
         <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Articles", root_path %></li>
+        <li><%= link_to "Fashion", fashion_path %></li>
+        <li> <%= link_to "Programming" , programming_path %></li>
         <li class="portfolio-link">
           <%= link_to "Portfolio", soon_path, target: "_blank"%>
         </li>
@@ -42,7 +43,8 @@
       <h3>Welcome to my blog <span class="heart">&#9829;</span></h3>
       <%= image_tag "aboutphoto.jpg", alt: "katherine", class: "about-photo" %>
       <br/>
-      <p></p>
+      <p class="fancy-font-lg"> Find me on:</p>
+      <%= link_to "Look Book", "http://lookbook.nu/katherinemuedas", target: "_blank" , class: "lookbook"%>
     </div>
   </div>
 

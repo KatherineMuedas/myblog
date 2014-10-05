@@ -1,0 +1,25 @@
+<div id="home">
+  <% @articles.each do |article| %>
+  <div class="main-box"> 
+    <h2 class='article-title'><%= link_to article.title, article_path(article) %> </h2>
+    
+    <h3 class='article-created-at'> <small ><%= friendly_date(article.published_at) %></small></h3>
+    <p class='img-center'>
+      <% unless article.pictures.empty? %>
+        <%= link_to image_tag(article.pictures.first.photo.url(:large), class:"show-img"), article_path(article.id) %>
+        <br/>           
+      <% end %>
+      <div class="small-box">
+       <p>
+          <%= link_to 'See More', article_path(article), class: 'button' %>
+        </p>
+      </div>
+    </div> 
+  </p>
+  <% if admin_signed_in? %>
+  <%= link_to 'Edit', edit_article_path(article) %>
+  <%= link_to 'Destroy', article_path(article),
+  method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <% end %>
+</div>

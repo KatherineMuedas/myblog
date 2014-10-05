@@ -6,11 +6,21 @@ def index
   @articles = Article.where("published_at <= ?", Time.now).order(published_at: :desc)
 end
 
+def programming_index
+    @articles = Article.where(category: "Programming" )
+end
+
+def fashion_index
+    @articles = Article.where(category: "Fashion" )
+end
+
 def new
+  @categories = ["Fashion" , "Programming"]
   @article = Article.new
 end
 
 def create
+  @categories = ["Fashion" , "Programming"]
   @article = Article.new(article_params)
  
   if @article.save
@@ -48,7 +58,7 @@ end
     @article = Article.friendly.find(params[:id])
   end
   def article_params
-    params.require(:article).permit(:title, :text, :published_at)
+    params.require(:article).permit(:title, :text, :published_at, :category)
   end
 
 end

@@ -20,7 +20,7 @@
   
   text-align:center;
   font-weight: normal;
-  font: italic normal 12px 'Times New Roman', Times, FreeSerif, serif;
+  @extend .fancy-font;
 }
 .article-body {
   text-align:center;
