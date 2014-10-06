@@ -1,6 +1,11 @@
 input:focus {
 outline-width: 0;
 }
+.floating-label-form-group{
+input:not(.button){
+    width:100%;
+}
+}
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
