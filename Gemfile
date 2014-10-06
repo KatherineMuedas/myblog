@@ -21,6 +21,8 @@ gem "figaro"
 gem "aws-sdk"
 gem 'asset_sync'
 gem 'friendly_id', '~> 5.0.0'
+gem 'haml'
+gem 'mail_form'
 
 
 group :production do
@@ -33,6 +35,7 @@ group :development do
   gem "binding_of_caller" 
   gem 'meta_request'
   gem 'xray-rails'
+  gem "letter_opener"
 end
 
 

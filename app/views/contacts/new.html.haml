@@ -1,0 +1,12 @@
+.main-box
+  %h1.center Contact Me
+  = simple_form_for @contact, html: {id: "contactForm", class: 'form-horizontal' } do |f|
+    .floating-label-form-group.controls
+      = f.input :name, required: true, placeholder: "Name", input_html: {id: "name", class: "form-control"}
+    .floating-label-form-group.controls
+
+      = f.input :email, required: true, label: "Email Address", placeholder: "Email Address", input_html: {id: "email", class: "form-control"}
+    .floating-label-form-group.controls
+      = f.input :message, required: true, placeholder: "Message", input_html: {id: "message", class: "form-control"}
+    .form-actions
+      = f.button :submit, 'Send', class: "button"

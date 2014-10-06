@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
   get "/programming", to: "articles#programming_index" , as: :programming
   get "/fashion", to: "articles#fashion_index" , as: :fashion
-  
+  resources "contacts", only: [:new, :create]
   root to: 'articles#index'
 end
 
