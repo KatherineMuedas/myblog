@@ -3,15 +3,15 @@ before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destr
 before_action :set_article, only:[:show, :edit, :update, :destroy]  
 
 def index
-  @articles = Article.where("published_at <= ?", Time.now).order(published_at: :asc)
+  @articles = Article.where("published_at <= ?", Time.now).order(published_at: :desc).limit(5)
 end
 
 def programming_index
-    @articles = Article.where(category: "Programming" )
+    @articles = Article.where(category: "Programming" ).where("published_at <= ?", Time.now).order(published_at: :desc)
 end
 
 def fashion_index
-    @articles = Article.where(category: "Fashion" )
+    @articles = Article.where(category: "Fashion" ).where("published_at <= ?", Time.now).order(published_at: :desc)
 end
 
 def new
